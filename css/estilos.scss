@@ -1,0 +1,475 @@
+/* --------------------------------------------------------
+Estilos para Solicitud de Crédito FF de Crédito Real
+version: 1.0
+last modified: 3.11.2015 por Angel Vera
+author: Angel Vera
+email: angel.vera@garritz.com
+website: http://angelvera.ninja
+----------------------------------------------------------*/
+
+/***
+ *                                    __            __        __                     
+ *                                   |  \          |  \      |  \                    
+ *     __     __   ______    ______   \$$  ______  | $$____  | $$  ______    _______ 
+ *    |  \   /  \ |      \  /      \ |  \ |      \ | $$    \ | $$ /      \  /       \
+ *     \$$\ /  $$  \$$$$$$\|  $$$$$$\| $$  \$$$$$$\| $$$$$$$\| $$|  $$$$$$\|  $$$$$$$
+ *      \$$\  $$  /      $$| $$   \$$| $$ /      $$| $$  | $$| $$| $$    $$ \$$    \ 
+ *       \$$ $$  |  $$$$$$$| $$      | $$|  $$$$$$$| $$__/ $$| $$| $$$$$$$$ _\$$$$$$\
+ *        \$$$    \$$    $$| $$      | $$ \$$    $$| $$    $$| $$ \$$     \|       $$
+ *         \$      \$$$$$$$ \$$       \$$  \$$$$$$$ \$$$$$$$  \$$  \$$$$$$$ \$$$$$$$ 
+ *                                                                                   
+ *                                                                                   
+ *                                                                                   
+ */
+
+$ancho: 1024px;
+$fuente: 'Lato','Helvetica Neue','Arial',sans-serif; 
+$fondo: #fcfcfc;
+$gris: #666;
+$grisc: #ddd;
+$azulc: #026db2; 
+$azulo: #0b223f;
+$azul3: #08316c;
+
+/***
+ *               __                                                __               
+ *              |  \                                              |  \              
+ *      ______  | $$  ______   ______ ____    ______   _______   _| $$_     _______ 
+ *     /      \ | $$ /      \ |      \    \  /      \ |       \ |   $$ \   /       \
+ *    |  $$$$$$\| $$|  $$$$$$\| $$$$$$\$$$$\|  $$$$$$\| $$$$$$$\ \$$$$$$  |  $$$$$$$
+ *    | $$    $$| $$| $$    $$| $$ | $$ | $$| $$    $$| $$  | $$  | $$ __  \$$    \ 
+ *    | $$$$$$$$| $$| $$$$$$$$| $$ | $$ | $$| $$$$$$$$| $$  | $$  | $$|  \ _\$$$$$$\
+ *     \$$     \| $$ \$$     \| $$ | $$ | $$ \$$     \| $$  | $$   \$$  $$|       $$
+ *      \$$$$$$$ \$$  \$$$$$$$ \$$  \$$  \$$  \$$$$$$$ \$$   \$$    \$$$$  \$$$$$$$ 
+ *                                                                                  
+ *                                                                                  
+ *                                                                                  
+ */
+
+*{
+  margin:0;
+  padding:0
+}
+
+body{
+  font-family: $fuente;
+  text-rendering: optimizeLegibility;
+}
+
+h1{
+  color: $azulo;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 20px;
+  margin-top: -63px;
+  text-align: center;
+}
+
+h2{
+  color: $azulo;
+  font-size: 13.5px;
+  line-height: 20px;
+}
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+i{
+  color: $gris;
+  font-style: normal;
+}
+
+input, select{
+  outline: none;
+  transition: all 0.9s;
+}
+
+input[type=text], input[type=number], input[type=email], select{
+  background-color: transparent;
+  border:none;
+  border-bottom:1px solid $grisc;
+  color: $gris;
+  font-size: 10px;
+  height: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, select:focus{
+  border-bottom: 1px solid $azulc;
+  border-bottom-color: $azulc !important;
+  box-shadow: 0 1px 0 0 $azulc;
+}
+
+input[disabled]{
+  background: transparent;
+  border-bottom: 1px dotted $grisc;
+  cursor: not-allowed;
+}
+
+label{
+  color: $gris;
+  float:left;
+  font-size: 10px;
+  line-height: 20px;
+  padding-right: 6px;
+}
+
+p{
+  color: $gris;
+  font-size: 11px;
+  text-align: center;
+}
+
+select{
+  height: 20px;
+}
+
+small{
+  color: $gris;
+  display:block;
+  font-size:9px;
+  text-align: justify;
+}
+
+span{
+  color: $gris;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 1px;
+  padding-right: 6px;
+}
+
+img{
+  border: none;
+  display: inline-block;
+}
+
+/***
+ *     __        __           
+ *    |  \      |  \          
+ *     \$$  ____| $$  _______ 
+ *    |  \ /      $$ /       \
+ *    | $$|  $$$$$$$|  $$$$$$$
+ *    | $$| $$  | $$ \$$    \ 
+ *    | $$| $$__| $$ _\$$$$$$\
+ *    | $$ \$$    $$|       $$
+ *     \$$  \$$$$$$$ \$$$$$$$ 
+ *                            
+ *                            
+ *                            
+ */
+
+#contenedor{
+  background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: $ancho; 
+}
+
+#pdf, #print{
+  background: $azulc;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: $fuente;
+  margin: 20px auto;
+  padding:6px 20px;
+}
+
+#response, #response-empleo, #response-referencias{
+  color: #f13b3b;
+  font-size: 15px;
+  text-align: center;
+}
+
+#aviso, #empleo, #info-crediticia, #referencias{
+  display: none;
+}
+
+
+
+/***
+ *               __                                                   
+ *              |  \                                                  
+ *      _______ | $$  ______    _______   _______   ______    _______ 
+ *     /       \| $$ |      \  /       \ /       \ /      \  /       \
+ *    |  $$$$$$$| $$  \$$$$$$\|  $$$$$$$|  $$$$$$$|  $$$$$$\|  $$$$$$$
+ *    | $$      | $$ /      $$ \$$    \  \$$    \ | $$    $$ \$$    \ 
+ *    | $$_____ | $$|  $$$$$$$ _\$$$$$$\ _\$$$$$$\| $$$$$$$$ _\$$$$$$\
+ *     \$$     \| $$ \$$    $$|       $$|       $$ \$$     \|       $$
+ *      \$$$$$$$ \$$  \$$$$$$$ \$$$$$$$  \$$$$$$$   \$$$$$$$ \$$$$$$$ 
+ *                                                                    
+ *                                                                    
+ *                                                                    
+ */
+
+.ant{
+  line-height: 20px;
+}
+
+.ant2{
+  line-height:19px;
+  letter-spacing: 1px;
+}
+
+.c12{
+  width: calc(100%);
+}
+
+.c11{
+  width: calc(91.66%);
+}
+
+.c10{
+  width: calc(83.33%);
+}
+
+.c9{
+  width: calc(75%);
+}
+
+.c8{
+  width: calc(66.66%);
+}
+
+.c7{
+  width: calc(58.33%);
+}
+
+.c6{
+  width: calc(50%);
+}
+
+.c5{
+  width: calc(41.66%);
+}
+
+.c4{
+  width: calc(33.33%);
+}
+
+.c3{
+  width: calc(25%);
+}
+
+.c2{
+  width: calc(16.66%);
+}
+
+.c1{
+  width: calc(8.33%);
+}
+
+.datei{
+  padding:0 15px;
+}
+
+.dato{
+  display: block;
+  float: left;
+  overflow: auto
+}
+
+.entr{
+  display:none;
+}
+
+.folio{
+  margin-top: -65px
+}
+
+.marco{
+  border: 2px solid $gris;
+  border-bottom: none;
+  padding: 5px;
+
+  input{
+    height: auto !important;
+  }
+
+  &:last-of-type{
+    border-bottom: 2px solid $gris;
+  }
+}
+
+.marco-last{
+  border-bottom: 2px solid $gris;
+}
+
+.marco-nop{
+  border: 2px solid $gris;
+  border-bottom: none;
+  padding: 2px 3px;
+
+  input{
+    height: auto !important;
+  }
+
+  &:last-of-type{
+    border-bottom: 2px solid $gris;
+  }
+}
+
+.monto{
+  clear: both;
+}
+
+.nota{
+  margin: 3px 0;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.nota2{
+  margin: 3px 0;
+  text-align: justify;
+}
+
+.perfil{
+  display: none;
+}
+
+.prepagos{
+  display:none
+}
+
+.promo{
+  margin-top: -45px;
+}
+
+.puesto1, .puesto2{
+  display:none;
+}
+
+.texto-izq{
+  float: left;
+  text-align:left !important;
+}
+
+.titulo-bloque{
+  background: $azul3;
+  border-radius: 3px;
+
+  h2{
+    color: #fff;
+    line-height:32px;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+}
+
+.nombre, .rfc-curp{
+  text-transform: uppercase;
+}
+
+.folio, .promo{
+  float: right;
+  width:238px;
+}
+
+/***
+ *                                             __                     
+ *                                            |  \                    
+ *      ______   __    __   ______    ______   \$$  ______    _______ 
+ *     /      \ |  \  |  \ /      \  /      \ |  \ /      \  /       \
+ *    |  $$$$$$\| $$  | $$|  $$$$$$\|  $$$$$$\| $$|  $$$$$$\|  $$$$$$$
+ *    | $$  | $$| $$  | $$| $$    $$| $$   \$$| $$| $$    $$ \$$    \ 
+ *    | $$__| $$| $$__/ $$| $$$$$$$$| $$      | $$| $$$$$$$$ _\$$$$$$\
+ *     \$$    $$ \$$    $$ \$$     \| $$      | $$ \$$     \|       $$
+ *      \$$$$$$$  \$$$$$$   \$$$$$$$ \$$       \$$  \$$$$$$$ \$$$$$$$ 
+ *          | $$                                                      
+ *          | $$                                                      
+ *           \$$                                                      
+ */
+
+@media print{
+
+  *{ 
+    background-color: #fff;
+    border-color: #000000;
+    color: #000000 !important;
+    margin:0;
+    padding:0;
+  }
+
+  h1{
+    font-size: 13pt !important;
+    line-height: 13pt !important;
+    margin-bottom: 40px;
+  }
+
+  h2, label, select, input, select, p{
+    color:#000 !important;
+    font-size: 7pt !important;
+    height: auto !important;
+    line-height: 9pt !important;
+  }
+
+  input, select{ 
+    letter-spacing: normal 
+  }
+
+  input[type=text], input[type=number], input[type=email]{
+    border-bottom: 1px solid #000000;
+    border-color: #000000;
+  }
+
+  span{
+    font-size: 7pt !important;
+  }
+
+  small{
+    color: #000000;
+    font-size: 5pt !important;
+    line-height: 7pt !important;
+  }
+
+  #pdf, #print{
+    display: none;
+  }
+
+  .ant, .ant2{
+    line-height: 9pt !important;
+  }
+
+  .datei{
+    padding:0 5pt;
+  }
+
+  .folio{
+    margin-top: -35px
+  }
+
+  .marco{
+    border:1px solid #000;
+    border-bottom: none;
+  }
+
+  .marco:last-of-type{
+    border-bottom:1px solid #000;
+  }
+
+  .marco-last, .marco-nop{
+    border:1px solid #000;
+  }
+
+  .perfil{
+    display:block;
+  }
+
+  .promo{
+    margin-top: -15px
+  }
+
+  .titulo-bloque h2{
+    margin: 3pt 0;
+  }
+
+}
